@@ -898,42 +898,20 @@ function selectOption(el) {
 async function submitRSVP() {
   var name = document.getElementById('name-input').value.trim();
   var phone = document.getElementById('phone-input').value.trim();
-  var errBox = document.getElementById('err-box');
-  errBox.style.display = 'none';
 
-  if (!name) { showError('Аты-жөніңізді жазыңыз!'); return; }
-  if (!selectedOption) { showError('Жауап таңдаңыз!'); return; }
+  if (!name) { alert('Аты-жөніңізді жазыңыз!'); return; }
+  if (!selectedOption) { alert('Жауап таңдаңыз!'); return; }
 
-  var btn = document.getElementById('submit-btn');
-  btn.classList.add('loading');
-  btn.disabled = true;
+  var data = new FormData();
+  data.append('name', name);
+  data.append('phone', phone || '—');
+  data.append('attendance', selectedOption);
+  data.append('time', new Date().toLocaleString('kk-KZ'));
 
-  try {
-    var data = new FormData();
-    data.append('name', name);
-    data.append('phone', phone || '—');
-    data.append('attendance', selectedOption);
-    data.append('time', new Date().toLocaleString('kk-KZ'));
+  await fetch(SCRIPT_URL, { method: 'POST', body: data });
 
-    var res = await fetch(SCRIPT_URL, { method: 'POST', body: data });
-
-    if (res.ok) {
-      document.getElementById('rsvp-form').style.display = 'none';
-      document.getElementById('ok-box').style.display = 'block';
-    } else {
-      throw new Error('Server error');
-    }
-  } catch (e) {
-    // Script URL орнатылмаса — тест режим
-    if (SCRIPT_URL.includes('ӨЗ_SCRIPT_ID')) {
-      document.getElementById('rsvp-form').style.display = 'none';
-      document.getElementById('ok-box').style.display = 'block';
-    } else {
-      showError('Қате шықты. Қайта байқаңыз немесе телефон арқылы хабарласыңыз.');
-      btn.classList.remove('loading');
-      btn.disabled = false;
-    }
-  }
+  document.getElementById('rsvp-form').style.display = 'none';
+  document.getElementById('ok-box').style.display = 'block';
 }
 
 function showError(msg) {
