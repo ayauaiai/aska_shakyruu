@@ -1,0 +1,969 @@
+<!DOCTYPE html>
+<html lang="kk">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+<title>Құдайы Ас — Талханбаев Жұмабек Дәулетұлы</title>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,600&family=Noto+Serif:ital,wght@0,300;0,400;1,300;1,400&display=swap" rel="stylesheet">
+<style>
+:root {
+  --cream:    #FAFAF7;
+  --warm:     #F0EBE0;
+  --green:    #1C3A2B;
+  --green2:   #2D5A3D;
+  --gold:     #C9A84C;
+  --gold2:    #E8CA78;
+  --earth:    #6B4F2A;
+  --text:     #2A2A2A;
+  --muted:    #7A7A70;
+  --border:   #DDD4C0;
+}
+
+* { margin:0; padding:0; box-sizing:border-box; }
+
+html { scroll-behavior:smooth; }
+
+body {
+  background: var(--green);
+  font-family: 'Noto Serif', Georgia, serif;
+  color: var(--text);
+  -webkit-font-smoothing: antialiased;
+}
+
+.page {
+  max-width: 480px;
+  margin: 0 auto;
+  background: var(--cream);
+  position: relative;
+  overflow: hidden;
+}
+
+/* ── ISLAMIC PATTERN BORDER ── */
+.geo-border {
+  position: relative;
+  background: var(--green);
+  padding: 4px;
+}
+.geo-border-inner {
+  background: var(--cream);
+}
+
+/* ── HERO ── */
+.hero {
+  background: var(--green);
+  padding: 40px 24px 0;
+  text-align: center;
+  position: relative;
+  overflow: hidden;
+}
+.hero::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background-image: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23C9A84C' fill-opacity='0.07'%3E%3Cpath d='M30 0L37.5 7.5L45 0L52.5 7.5L60 0L60 7.5L52.5 15L60 22.5L60 30L52.5 22.5L45 30L52.5 37.5L60 30L60 37.5L52.5 45L60 52.5L60 60L52.5 52.5L45 60L37.5 52.5L30 60L22.5 52.5L15 60L7.5 52.5L0 60L0 52.5L7.5 45L0 37.5L0 30L7.5 37.5L15 30L7.5 22.5L0 30L0 22.5L7.5 15L0 7.5L0 0L7.5 7.5L15 0L22.5 7.5L30 0z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+  pointer-events: none;
+}
+
+.bismillah {
+  font-size: 36px;
+  color: var(--gold);
+  margin-bottom: 6px;
+  opacity: 0;
+  animation: fadeDown 1s ease 0.3s forwards;
+  font-family: serif;
+}
+.bismillah-tr {
+  font-size: 10px;
+  color: var(--gold2);
+  letter-spacing: 3px;
+  opacity: 0;
+  animation: fadeDown 1s ease 0.6s forwards;
+  margin-bottom: 28px;
+}
+
+/* ── ARCH / DOME ── */
+.arch-shell {
+  background: var(--green);
+  padding: 0 20px;
+}
+.arch-card {
+  background: var(--cream);
+  border-radius: 160px 160px 0 0;
+  padding: 32px 20px 28px;
+  text-align: center;
+  position: relative;
+}
+
+/* Islamic border frame on arch */
+.arch-card::before {
+  content: '';
+  position: absolute;
+  top: 16px; left: 16px; right: 16px; bottom: 0;
+  border-radius: 150px 150px 0 0;
+  border: 1.5px solid var(--gold);
+  border-bottom: none;
+  opacity: 0.35;
+  pointer-events: none;
+}
+.arch-card::after {
+  content: '';
+  position: absolute;
+  top: 24px; left: 24px; right: 24px; bottom: 0;
+  border-radius: 145px 145px 0 0;
+  border: 0.5px solid var(--gold);
+  border-bottom: none;
+  opacity: 0.2;
+  pointer-events: none;
+}
+
+/* crescent ornament */
+.crescent-row {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 22px;
+  color: var(--gold);
+  font-size: 20px;
+}
+.crescent-row .star { font-size: 9px; opacity: 0.7; }
+
+/* photo */
+.photo-ring {
+  width: 150px;
+  height: 150px;
+  margin: 0 auto 22px;
+  position: relative;
+}
+.photo-ring::before {
+  content: '';
+  position: absolute;
+  inset: -6px;
+  border-radius: 50%;
+  border: 2px solid var(--gold);
+  opacity: 0.5;
+  animation: pulse 3s ease-in-out infinite;
+}
+.photo-ring::after {
+  content: '';
+  position: absolute;
+  inset: -12px;
+  border-radius: 50%;
+  border: 1px solid var(--gold);
+  opacity: 0.2;
+  animation: pulse 3s ease-in-out 0.5s infinite;
+}
+.photo-ring img, .photo-placeholder {
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 3px solid var(--gold);
+  display: block;
+}
+.photo-placeholder {
+  background: linear-gradient(135deg, var(--green) 0%, var(--green2) 100%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.photo-placeholder svg {
+  width: 70px;
+  height: 70px;
+  fill: var(--gold);
+  opacity: 0.6;
+}
+
+.name-main {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 28px;
+  font-weight: 700;
+  color: var(--green);
+  letter-spacing: 2px;
+  margin-bottom: 4px;
+  line-height: 1.2;
+}
+.name-dua {
+  font-size: 13px;
+  color: var(--muted);
+  font-style: italic;
+  letter-spacing: 0.3px;
+  line-height: 1.7;
+  padding: 0 10px;
+}
+
+/* ── GOLD DIVIDER ── */
+.divider {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 24px 28px;
+}
+.divider-line {
+  flex: 1;
+  height: 1px;
+  background: linear-gradient(to right, transparent, var(--gold), transparent);
+}
+.divider-gem {
+  color: var(--gold);
+  font-size: 14px;
+  flex-shrink: 0;
+}
+
+/* ── INVITE TEXT ── */
+.invite {
+  padding: 0 28px 8px;
+  text-align: center;
+  font-size: 15.5px;
+  color: var(--text);
+  line-height: 2;
+}
+.invite .highlight {
+  font-family: 'Cormorant Garamond', serif;
+  font-weight: 700;
+  color: var(--green);
+  font-size: 16.5px;
+}
+.invite .name-bold {
+  font-family: 'Cormorant Garamond', serif;
+  font-weight: 700;
+  font-size: 17px;
+  color: var(--green);
+  display: block;
+  margin: 6px 0;
+  letter-spacing: 0.5px;
+}
+
+/* ── INFO CARDS ── */
+.cards {
+  padding: 8px 18px 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.card {
+  background: #fff;
+  border-radius: 16px;
+  border: 1px solid var(--border);
+  border-left: 4px solid var(--gold);
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  padding: 16px 18px;
+  box-shadow: 0 2px 16px rgba(28,58,43,0.06);
+  opacity: 0;
+  transform: translateY(16px);
+  transition: opacity 0.5s ease, transform 0.5s ease;
+}
+.card.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.card-icon {
+  width: 48px;
+  height: 48px;
+  background: var(--green);
+  border-radius: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  box-shadow: 0 2px 10px rgba(28,58,43,0.25);
+}
+.card-icon svg { width: 22px; height: 22px; fill: var(--gold); }
+.card-label {
+  font-size: 10px;
+  color: var(--muted);
+  letter-spacing: 2.5px;
+  text-transform: uppercase;
+  margin-bottom: 5px;
+  font-family: 'Noto Serif', serif;
+}
+.card-value {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 19px;
+  color: var(--green);
+  font-weight: 700;
+  letter-spacing: 0.5px;
+  line-height: 1.3;
+}
+.card-sub {
+  font-size: 12px;
+  color: var(--muted);
+  margin-top: 2px;
+  letter-spacing: 0.3px;
+}
+
+/* ── CALENDAR ── */
+.cal-wrap {
+  margin: 4px 18px 20px;
+  background: #fff;
+  border-radius: 18px;
+  overflow: hidden;
+  border: 1px solid var(--border);
+  box-shadow: 0 4px 20px rgba(28,58,43,0.08);
+  opacity: 0;
+  transform: translateY(16px);
+  transition: opacity 0.5s ease 0.2s, transform 0.5s ease 0.2s;
+}
+.cal-wrap.visible { opacity: 1; transform: translateY(0); }
+.cal-head {
+  background: var(--green);
+  padding: 14px 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+}
+.cal-head svg { width: 16px; height: 16px; fill: var(--gold); }
+.cal-head-txt {
+  color: var(--gold);
+  font-size: 11px;
+  letter-spacing: 3.5px;
+  font-family: 'Noto Serif', serif;
+}
+.cal-month {
+  text-align: center;
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 18px;
+  color: var(--green);
+  font-weight: 700;
+  letter-spacing: 2px;
+  padding: 16px 16px 6px;
+}
+.cal-hr { height: 1px; background: var(--warm); margin: 0 16px 8px; }
+.cal-grid {
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+  padding: 0 10px 16px;
+  gap: 2px;
+}
+.cdn {
+  text-align: center;
+  font-size: 10px;
+  color: var(--muted);
+  padding: 4px 0 10px;
+  font-weight: 700;
+  letter-spacing: 0.5px;
+  font-family: 'Noto Serif', serif;
+}
+.cd {
+  text-align: center;
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 16px;
+  color: var(--text);
+  padding: 7px 2px;
+  line-height: 1;
+}
+.cd.empty { color: transparent; }
+.cd.today {
+  background: var(--green);
+  color: var(--gold) !important;
+  font-weight: 700;
+  font-size: 17px;
+  width: 34px;
+  height: 34px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto;
+  border-radius: 50%;
+  box-shadow: 0 0 0 2px var(--gold), 0 2px 12px rgba(201,168,76,0.35);
+  animation: glow 2.5s ease-in-out infinite;
+}
+
+/* ── MAP BUTTON ── */
+.map-btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  margin: 0 18px 24px;
+  padding: 18px;
+  background: var(--gold);
+  color: var(--green);
+  text-align: center;
+  font-family: 'Noto Serif', serif;
+  font-size: 13px;
+  font-weight: 700;
+  letter-spacing: 3px;
+  border-radius: 14px;
+  text-decoration: none;
+  box-shadow: 0 4px 20px rgba(201,168,76,0.4);
+  transition: transform 0.15s, box-shadow 0.15s;
+}
+.map-btn:hover { transform: translateY(-2px); box-shadow: 0 8px 28px rgba(201,168,76,0.5); }
+.map-btn svg { width: 18px; height: 18px; fill: var(--green); flex-shrink: 0; }
+
+/* ── SECTION HEADER ── */
+.section-head {
+  text-align: center;
+  padding: 8px 24px 4px;
+}
+.section-eyebrow {
+  font-size: 10px;
+  color: var(--gold);
+  letter-spacing: 4px;
+  text-transform: uppercase;
+  margin-bottom: 8px;
+  font-family: 'Noto Serif', serif;
+}
+.section-title {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 30px;
+  font-style: italic;
+  color: var(--green);
+  font-weight: 600;
+}
+
+/* ── RSVP ── */
+.rsvp {
+  background: var(--warm);
+  border-top: 2px solid var(--border);
+  padding: 32px 24px 36px;
+}
+.rsvp-sub {
+  text-align: center;
+  font-size: 14px;
+  color: var(--muted);
+  line-height: 1.8;
+  margin-bottom: 28px;
+  letter-spacing: 0.3px;
+}
+
+.fg { margin-bottom: 18px; }
+.fl {
+  display: block;
+  font-size: 10px;
+  color: var(--earth);
+  letter-spacing: 2.5px;
+  text-transform: uppercase;
+  margin-bottom: 9px;
+  font-family: 'Noto Serif', serif;
+  font-weight: 700;
+}
+.fi {
+  width: 100%;
+  padding: 15px 16px;
+  border: 1.5px solid var(--border);
+  border-radius: 12px;
+  font-size: 15px;
+  font-family: 'Cormorant Garamond', Georgia, serif;
+  color: var(--green);
+  background: #fff;
+  outline: none;
+  transition: border-color 0.2s, box-shadow 0.2s;
+}
+.fi:focus {
+  border-color: var(--green);
+  box-shadow: 0 0 0 3px rgba(28,58,43,0.08);
+}
+.fi::placeholder { color: #C0B8A8; }
+
+.rg { display: flex; flex-direction: column; gap: 10px; }
+.ri {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  cursor: pointer;
+  padding: 15px 16px;
+  border: 1.5px solid var(--border);
+  border-radius: 12px;
+  background: #fff;
+  transition: all 0.2s;
+}
+.ri:hover { border-color: var(--green); }
+.ri.sel { border-color: var(--green); background: rgba(28,58,43,0.04); }
+.ri input { display: none; }
+.rc {
+  width: 22px;
+  height: 22px;
+  border-radius: 50%;
+  border: 2px solid var(--border);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  transition: all 0.2s;
+}
+.ri.sel .rc { border-color: var(--green); background: var(--green); }
+.rdot {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: var(--gold);
+  display: none;
+}
+.ri.sel .rdot { display: block; }
+.rtxt { font-size: 15px; color: var(--text); font-family: 'Noto Serif', serif; }
+
+.sbtn {
+  width: 100%;
+  padding: 18px;
+  background: var(--green);
+  color: var(--gold);
+  border: none;
+  border-radius: 14px;
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 17px;
+  font-weight: 700;
+  letter-spacing: 4px;
+  cursor: pointer;
+  margin-top: 14px;
+  box-shadow: 0 4px 20px rgba(28,58,43,0.25);
+  transition: all 0.2s;
+  position: relative;
+}
+.sbtn:hover { background: var(--green2); transform: translateY(-1px); }
+.sbtn:disabled { opacity: 0.6; cursor: not-allowed; transform: none; }
+
+/* loading spinner */
+.spinner {
+  display: none;
+  width: 20px;
+  height: 20px;
+  border: 2px solid var(--gold2);
+  border-top-color: transparent;
+  border-radius: 50%;
+  animation: spin 0.7s linear infinite;
+  margin: 0 auto;
+}
+.sbtn.loading .btn-text { display: none; }
+.sbtn.loading .spinner { display: block; }
+
+.ok-box {
+  display: none;
+  text-align: center;
+  padding: 32px 20px;
+  background: #fff;
+  border-radius: 18px;
+  border: 2px solid var(--green);
+  margin-top: 14px;
+}
+.ok-check {
+  width: 60px;
+  height: 60px;
+  background: var(--green);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto 16px;
+  animation: popIn 0.4s cubic-bezier(0.175,0.885,0.32,1.275) forwards;
+}
+.ok-check svg { width: 28px; height: 28px; fill: var(--gold); }
+.ok-title {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 24px;
+  color: var(--green);
+  font-weight: 700;
+  margin-bottom: 10px;
+}
+.ok-text { font-size: 14px; color: var(--muted); line-height: 1.8; }
+
+/* error box */
+.err-box {
+  display: none;
+  background: #fff0f0;
+  border: 1.5px solid #e0a0a0;
+  border-radius: 12px;
+  padding: 14px 16px;
+  font-size: 13px;
+  color: #c0392b;
+  margin-top: 12px;
+  text-align: center;
+  line-height: 1.6;
+}
+
+/* ── FOOTER ── */
+.footer {
+  background: var(--green);
+  text-align: center;
+  padding: 0 24px 44px;
+  position: relative;
+}
+.footer-wave {
+  background: var(--cream);
+  height: 48px;
+  border-radius: 0 0 60px 60px;
+  margin-bottom: 32px;
+}
+.footer-bismillah {
+  font-size: 28px;
+  color: var(--gold);
+  margin-bottom: 8px;
+}
+.footer-ornament {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 16px;
+  margin-bottom: 20px;
+  color: var(--gold);
+  opacity: 0.5;
+}
+.footer-ornament span { font-size: 18px; }
+.footer-ornament::before,
+.footer-ornament::after {
+  content: '';
+  width: 40px;
+  height: 1px;
+  background: var(--gold);
+  opacity: 0.5;
+}
+.footer-from {
+  font-size: 10px;
+  color: var(--gold2);
+  letter-spacing: 4px;
+  margin-bottom: 12px;
+  font-family: 'Noto Serif', serif;
+}
+.footer-names {
+  color: #fff;
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 22px;
+  font-style: italic;
+  line-height: 2;
+}
+.footer-dua {
+  margin-top: 24px;
+  font-size: 13px;
+  color: var(--gold2);
+  opacity: 0.7;
+  line-height: 1.9;
+  font-style: italic;
+}
+
+/* ── ANIMATIONS ── */
+@keyframes fadeDown {
+  from { opacity: 0; transform: translateY(-12px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+@keyframes pulse {
+  0%, 100% { transform: scale(1); opacity: 0.5; }
+  50%       { transform: scale(1.06); opacity: 0.8; }
+}
+@keyframes glow {
+  0%, 100% { box-shadow: 0 0 0 2px var(--gold), 0 2px 12px rgba(201,168,76,0.35); }
+  50%       { box-shadow: 0 0 0 3px var(--gold), 0 4px 24px rgba(201,168,76,0.6); }
+}
+@keyframes spin {
+  to { transform: rotate(360deg); }
+}
+@keyframes popIn {
+  from { transform: scale(0.5); opacity: 0; }
+  to   { transform: scale(1); opacity: 1; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after { animation-duration: 0.01ms !important; }
+}
+</style>
+</head>
+<body>
+<div class="page">
+
+  <!-- HERO -->
+  <div class="hero">
+    <div class="bismillah">﷽</div>
+    <div class="bismillah-tr">БИСМИЛЛАHИР РАHМАНИР РАHИМ</div>
+  </div>
+
+  <!-- ARCH / DOME -->
+  <div class="arch-shell">
+    <div class="arch-card">
+      <div class="crescent-row">
+        <span>☽</span>
+        <span class="star">✦</span>
+        <span>✦</span>
+        <span class="star">✦</span>
+        <span>☾</span>
+      </div>
+
+      <!-- Photo -->
+      <div class="photo-ring">
+        <!-- Сурет болса img тегін пайдаланыңыз: -->
+        <!-- <img src="СУРЕТ_URL" alt="Талханбаев Жұмабек Дәулетұлы"> -->
+        <div class="photo-placeholder">
+          <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+            <path d="M12 12c2.7 0 4.8-2.1 4.8-4.8S14.7 2.4 12 2.4 7.2 4.5 7.2 7.2 9.3 12 12 12zm0 2.4c-3.2 0-9.6 1.6-9.6 4.8v2.4h19.2v-2.4c0-3.2-6.4-4.8-9.6-4.8z"/>
+          </svg>
+        </div>
+      </div>
+
+      <div class="name-main">ТАЛХАНБАЕВ ЖҰМАБЕК</div>
+      <div class="name-dua">Дәулетұлы<br><em>Мәңгілік бейіштен орын тапсын • Аллаh рахмет етсін</em></div>
+    </div>
+  </div>
+
+  <!-- INVITE -->
+  <div class="divider">
+    <div class="divider-line"></div>
+    <span class="divider-gem">✦</span>
+    <div class="divider-line"></div>
+  </div>
+
+  <div class="invite">
+    <p>Құрметті құда-жекжат, ағайын-туыс, дос-жарандар!</p>
+    <br>
+    <p>Сіздерді марқұм</p>
+    <span class="name-bold">Талханбаев Жұмабек Дәулетұлының</span>
+    <p>дүниеден өткеніне <span class="highlight">1 жыл толуына</span> орай берілетін</p>
+    <br>
+    <p><span class="highlight">Құдайы ас пен Құран бағыштау</span> рәсіміне шақырамыз.</p>
+    <br>
+    <p>Марқұмның рухына бағышталған дастарханымызға ортақтасып, ақ баталарыңызды беруіңізді сұраймыз.</p>
+  </div>
+
+  <div class="divider">
+    <div class="divider-line"></div>
+    <span class="divider-gem">❋</span>
+    <div class="divider-line"></div>
+  </div>
+
+  <!-- INFO CARDS -->
+  <div class="cards">
+    <div class="card" data-reveal>
+      <div class="card-icon">
+        <svg viewBox="0 0 24 24"><path d="M19 4h-1V2h-2v2H8V2H6v2H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 16H5V9h14v11zM5 7V6h14v1H5zm2 4h10v2H7zm0 4h7v2H7z"/></svg>
+      </div>
+      <div>
+        <div class="card-label">Күні</div>
+        <div class="card-value">08 тамыз 2026 жыл</div>
+        <div class="card-sub">Сенбі</div>
+      </div>
+    </div>
+
+    <div class="card" data-reveal>
+      <div class="card-icon">
+        <svg viewBox="0 0 24 24"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 18c-4.42 0-8-3.58-8-8s3.58-8 8-8 8 3.58 8 8-3.58 8-8 8zm.5-13H11v6l5.25 3.15.75-1.23-4.5-2.67V7z"/></svg>
+      </div>
+      <div>
+        <div class="card-label">Уақыты</div>
+        <div class="card-value">Сағат 13:00</div>
+        <div class="card-sub">Түстен кейін</div>
+      </div>
+    </div>
+
+    <div class="card" data-reveal>
+      <div class="card-icon">
+        <svg viewBox="0 0 24 24"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"/></svg>
+      </div>
+      <div>
+        <div class="card-label">Мекен-жайы</div>
+        <div class="card-value">«Аль-Баракат» мейрамханасы</div>
+        <div class="card-sub">Тараз қ., Айтиев к-сі, 113</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- CALENDAR -->
+  <div class="cal-wrap" data-reveal>
+    <div class="cal-head">
+      <svg viewBox="0 0 24 24"><path d="M19 4h-1V2h-2v2H8V2H6v2H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 16H5V9h14v11zM5 7V6h14v1H5z"/></svg>
+      <span class="cal-head-txt">ТАМЫЗ 2026</span>
+    </div>
+    <div class="cal-month">08 ТАМЫЗ 2026 ЖЫЛ</div>
+    <div class="cal-hr"></div>
+    <div class="cal-grid">
+      <div class="cdn">ДС</div><div class="cdn">СС</div><div class="cdn">СР</div>
+      <div class="cdn">БС</div><div class="cdn">ЖМ</div><div class="cdn">СН</div><div class="cdn">ЖС</div>
+
+      <div class="cd empty">x</div>
+      <div class="cd empty">x</div>
+      <div class="cd empty">x</div>
+      <div class="cd empty">x</div>
+      <div class="cd empty">x</div>
+      <div class="cd">1</div><div class="cd">2</div>
+      <div class="cd">3</div><div class="cd">4</div><div class="cd">5</div>
+      <div class="cd">6</div><div class="cd">7</div><div class="cd today">8</div><div class="cd">9</div>
+      <div class="cd">10</div><div class="cd">11</div><div class="cd">12</div>
+      <div class="cd">13</div><div class="cd">14</div><div class="cd">15</div><div class="cd">16</div>
+      <div class="cd">17</div><div class="cd">18</div><div class="cd">19</div>
+      <div class="cd">20</div><div class="cd">21</div><div class="cd">22</div><div class="cd">23</div>
+      <div class="cd">24</div><div class="cd">25</div><div class="cd">26</div>
+      <div class="cd">27</div><div class="cd">28</div><div class="cd">29</div><div class="cd">30</div>
+      <div class="cd">31</div>
+      <div class="cd empty">x</div><div class="cd empty">x</div><div class="cd empty">x</div>
+      <div class="cd empty">x</div><div class="cd empty">x</div><div class="cd empty">x</div>
+    </div>
+  </div>
+
+  <!-- MAP BUTTON -->
+  <a class="map-btn" href="https://2gis.kz/taraz/search/%D0%90%D0%BB%D1%8C-%D0%91%D0%B0%D1%80%D0%B0%D0%BA%D0%B0%D1%82" target="_blank" rel="noopener">
+    <svg viewBox="0 0 24 24"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"/></svg>
+    КАРТАДА ҚАРАУ — 2ГИС
+  </a>
+
+  <!-- RSVP SECTION -->
+  <div class="section-head">
+    <div class="section-eyebrow">✦ РАСТАУ ✦</div>
+    <div class="section-title">Қатысуыңызды растаңыз</div>
+  </div>
+
+  <div class="divider" style="padding: 12px 28px 20px;">
+    <div class="divider-line"></div>
+    <span class="divider-gem">❋</span>
+    <div class="divider-line"></div>
+  </div>
+
+  <div class="rsvp">
+    <div class="rsvp-sub">
+      Дастарханымызды дұрыс дайындау үшін<br>қатысуыңызды алдын ала растауыңызды<br>сұраймыз.
+    </div>
+
+    <div id="rsvp-form">
+      <div class="fg">
+        <label class="fl" for="name-input">Аты-жөніңіз</label>
+        <input type="text" class="fi" id="name-input" placeholder="Аты-жөніңізді жазыңыз">
+      </div>
+
+      <div class="fg">
+        <label class="fl" for="phone-input">Телефон нөмірі</label>
+        <input type="tel" class="fi" id="phone-input" placeholder="+7 (___) ___-__-__">
+      </div>
+
+      <div class="fg">
+        <label class="fl">Асқа келесіз бе?</label>
+        <div class="rg" id="attendance-group">
+          <div class="ri" onclick="selectOption(this)">
+            <input type="radio" name="att">
+            <div class="rc"><div class="rdot"></div></div>
+            <span class="rtxt">Қатысамын</span>
+          </div>
+          <div class="ri" onclick="selectOption(this)">
+            <input type="radio" name="att">
+            <div class="rc"><div class="rdot"></div></div>
+            <span class="rtxt">Жұбайыммен боламын</span>
+          </div>
+          <div class="ri" onclick="selectOption(this)">
+            <input type="radio" name="att">
+            <div class="rc"><div class="rdot"></div></div>
+            <span class="rtxt">Отбасыммен боламын</span>
+          </div>
+          <div class="ri" onclick="selectOption(this)">
+            <input type="radio" name="att">
+            <div class="rc"><div class="rdot"></div></div>
+            <span class="rtxt">Өкінішке орай, келе алмаймын</span>
+          </div>
+        </div>
+      </div>
+
+      <button class="sbtn" id="submit-btn" onclick="submitRSVP()">
+        <span class="btn-text">ЖІБЕРУ</span>
+        <div class="spinner"></div>
+      </button>
+
+      <div class="err-box" id="err-box"></div>
+    </div>
+
+    <div class="ok-box" id="ok-box">
+      <div class="ok-check">
+        <svg viewBox="0 0 24 24"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/></svg>
+      </div>
+      <div class="ok-title">Рахмет!</div>
+      <div class="ok-text">Жауабыңыз қабылданды.<br>Сізді асымызда күтеміз!</div>
+    </div>
+  </div>
+
+  <!-- FOOTER -->
+  <div class="footer">
+    <div class="footer-wave"></div>
+    <div class="footer-bismillah">﷽</div>
+    <div class="footer-ornament">
+      <span>☽</span>
+      <span>✦</span>
+      <span>☾</span>
+    </div>
+    <div class="footer-from">ҚҰРМЕТПЕН</div>
+    <div class="footer-names">
+      Жұбайы,<br>қыз-ұлдары мен<br>немере-шөберелері
+    </div>
+    <div class="footer-dua">
+      «Иманды жанға мейірімді бол, Аллаhым»<br>
+      Аl-Fatihа · Сүре Ясин · Дұа
+    </div>
+  </div>
+
+</div>
+
+<script>
+// ─── CONFIG ───────────────────────────────────────────────────────────
+// Google Apps Script Web App URL — төменде нұсқаулық бар
+// Өзіңіздің URL-іңізді осы жерге қойыңыз:
+var SCRIPT_URL = 'https://script.google.com/macros/s/ӨЗ_SCRIPT_ID_ОСЫҒАН_АУЫСТЫР/exec';
+
+// ─── RSVP STATE ───────────────────────────────────────────────────────
+var selectedOption = null;
+
+function selectOption(el) {
+  document.querySelectorAll('.ri').forEach(r => r.classList.remove('sel'));
+  el.classList.add('sel');
+  selectedOption = el.querySelector('.rtxt').textContent;
+}
+
+// ─── SUBMIT ──────────────────────────────────────────────────────────
+async function submitRSVP() {
+  var name = document.getElementById('name-input').value.trim();
+  var phone = document.getElementById('phone-input').value.trim();
+  var errBox = document.getElementById('err-box');
+  errBox.style.display = 'none';
+
+  if (!name) { showError('Аты-жөніңізді жазыңыз!'); return; }
+  if (!selectedOption) { showError('Жауап таңдаңыз!'); return; }
+
+  var btn = document.getElementById('submit-btn');
+  btn.classList.add('loading');
+  btn.disabled = true;
+
+  try {
+    var data = new FormData();
+    data.append('name', name);
+    data.append('phone', phone || '—');
+    data.append('attendance', selectedOption);
+    data.append('time', new Date().toLocaleString('kk-KZ'));
+
+    var res = await fetch(SCRIPT_URL, { method: 'POST', body: data });
+
+    if (res.ok) {
+      document.getElementById('rsvp-form').style.display = 'none';
+      document.getElementById('ok-box').style.display = 'block';
+    } else {
+      throw new Error('Server error');
+    }
+  } catch (e) {
+    // Script URL орнатылмаса — тест режим
+    if (SCRIPT_URL.includes('ӨЗ_SCRIPT_ID')) {
+      document.getElementById('rsvp-form').style.display = 'none';
+      document.getElementById('ok-box').style.display = 'block';
+    } else {
+      showError('Қате шықты. Қайта байқаңыз немесе телефон арқылы хабарласыңыз.');
+      btn.classList.remove('loading');
+      btn.disabled = false;
+    }
+  }
+}
+
+function showError(msg) {
+  var errBox = document.getElementById('err-box');
+  errBox.textContent = msg;
+  errBox.style.display = 'block';
+}
+
+// ─── SCROLL REVEAL ───────────────────────────────────────────────────
+var observer = new IntersectionObserver(function(entries) {
+  entries.forEach(function(entry) {
+    if (entry.isIntersecting) {
+      entry.target.classList.add('visible');
+    }
+  });
+}, { threshold: 0.15 });
+
+document.querySelectorAll('[data-reveal]').forEach(function(el) {
+  observer.observe(el);
+});
+</script>
+</body>
+</html>
